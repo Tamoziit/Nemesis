@@ -1,0 +1,11 @@
+**Socket.io** : It is a web server library which is used to carry out realtime data communication & exchange over a web application, without having to refresh the application during each state or DB update.
+
+eg: in our website --> *Without Socket.io*
+                        --> User 1 sends a message to User 2
+                        --> It goes to the backend server & updates the DB
+                        --> Now the interface of user 2 is not updated with the message until he/she refreshes the page.
+
+    Socket.io deals with this drawback -->
+        --> user 1 sends a message to user 2.
+        --> The message moves to socket.io server, which is mounted over the backend server, instead of directly moving into the main backend server. It then updates the DB.
+        --> Socket.io immediately relays the message data of user 1, to the interface of user 2, without him/her having to refresh at each update. 
