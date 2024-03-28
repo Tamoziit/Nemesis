@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (authUser) {
-            const socket = io("http://localhost:5000", {
+            const socket = io("https://nemesis-owrb.onrender.com", {
                 query: {
                     userId: authUser._id //passiing auth user id as socket id
                 },
