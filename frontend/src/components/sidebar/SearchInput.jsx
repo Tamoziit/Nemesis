@@ -10,13 +10,14 @@ const SearchInput = () => {
     const { conversations } = useGetConversations();
     const [searchResults, setSearchResults] = useState([]);
 
+    //Search Algo
     useEffect(() => {
         if (search === "") {
             setSearchResults([]);
             return;
         }
 
-        // Implement debouncing here to delay the search
+        // Implementing debouncing to delay the search (prevents false API calls)
         const timer = setTimeout(() => {
             const filteredResults = conversations.filter(
                 (c) =>
@@ -24,7 +25,7 @@ const SearchInput = () => {
                     c.username.toLowerCase().includes(search.toLowerCase())
             );
             setSearchResults(filteredResults);
-        }, 300); // Adjust debounce delay as needed
+        }, 300); // Adjusting debounce delay as needed
 
         return () => clearTimeout(timer);
     }, [search, conversations]);
@@ -41,7 +42,7 @@ const SearchInput = () => {
             return;
         }
 
-        // For simplicity, select the first result
+        // Selecting the first result
         const selectedConversation = searchResults[0];
         setSelectedConversation(selectedConversation);
         setSearch("");
