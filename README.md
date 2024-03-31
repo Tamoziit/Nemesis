@@ -10,7 +10,7 @@
   <img align="right" alt="homepage" width="460" src="Nemesis-1.png">
 - Search users and like-minded peeps.
 - Secure user experience.
-- Secure databse to store user data & credentials.
+- Secure database to store user data & credentials.
 - Random emojis and avatars.
 - Immersive user experience.
 
